@@ -17,6 +17,12 @@
     <script type="text/javascript" src="js/app.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.4/js/intlTelInput.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.4/js/utils.js"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("user_JWFUVwdUNr6GvSgzyco7H");
+        })();
+    </script>
 
 </head>
 
@@ -317,20 +323,9 @@
 
             alert(' Thank you for contacting us, we will reach you shortly.');
             $("#contact-details").hide();
-            $.ajax({
-                method: 'POST',
-                url: '/root/send_mail?'+ data_string,
-                dataType: 'json',
-                success: function(html) {
-                    console.log("request sent successfully");
-                },
-                error: function(jqXHR, exception) {
-                    // console.log("unable to process the request");
-                    // $("#contact-details").show();
-                    console.log(' We are unable to process your request. Please reach us through email.');
-                    console.log(' Error: ' + exception);
-                }
-            });
+            emailjs.send("default_service","retainity",{"name":name,"email":email,"phone":phone, "b_details": b_details,"store_url": store_url });
+
+
 
         } catch (e){
             console.log(e);
