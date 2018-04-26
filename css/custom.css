@@ -62,7 +62,7 @@ body {
 
 .navbar-bottom {
     margin-bottom: 0px;
-    background-color: rgba(235, 235, 235, 0.8);
+    background-color: #fff
 }
 
 .div-partners {
@@ -330,5 +330,9 @@ input[type=radio] {
 
 .dial-code {
     color: white !important;
+}
 
+.coming-soon{
+
+    background-color: #f7f7f7;
 }
