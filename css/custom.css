@@ -186,17 +186,17 @@ body {
 }
 
 .mail-icon {
-    padding-top: 15%;
+    padding-top: 8%;
+    padding-bottom: 17%;
     background-color: #fff;
     margin: 0px 1px;
     /*border: 1px solid #e0dada;*/
 }
 
 .mail-id {
-    padding-bottom: 28%;
     background-color: #fff;
     margin: 0px 1px;
-    padding-top: 3px;
+    padding-top: 17%;
     word-wrap: break-word;
     /*border: 1px solid #e0dada;*/
 }
@@ -336,3 +336,10 @@ input[type=radio] {
 
     background-color: #f7f7f7;
 }
+
+/*i.fa {*/
+    /*display: inline-block;*/
+    /*border-radius: 60px;*/
+    /*box-shadow: 0px 0px 5px #0C6195;*/
+    /*padding: 0.5em 0.6em;*/
+/*}*/
